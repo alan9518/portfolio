@@ -1,39 +1,28 @@
 /* ==========================================================================
-** About Section Page
-** 23/01/2021
+** My Works Page
+** 24/01/2021
 ** Alan Medina Silva
 ** ========================================================================== */
 
 // --------------------------------------
-// Imports
+// Impots
 // --------------------------------------
-    import React, {Fragment} from 'react';
-    import AboutSection from '../components/views/AboutSection';
-    import ServicesSection from '../components/views/ServicesSection';
-    import FAQSection from '../components/views/FaqSection';
-    
-
+    import React from 'react';
 
 // --------------------------------------
 // Create Component
 // --------------------------------------
-    const AboutPage = () => {
-
+    const MyWorks  = ()=> {
 
         // ?--------------------------------------
         // ? Render Component
         // ?--------------------------------------
-        return(
-            <Fragment>
-                <AboutSection/>
-                <ServicesSection/>
-                <FAQSection/>  
-            </Fragment>
-        )
+        return (
+            <h1>My Works</h1>
+        );
     }
-
 
 // --------------------------------------
 // Export Component
 // --------------------------------------
-    export default AboutPage;
+    export default MyWorks;

@@ -13,6 +13,8 @@
     import money from '../../img/money.svg';
     import teamwork from '../../img/teamwork.svg';
     import home2 from '../../img/home2.png';
+    import styled from 'styled-components';
+    import {AboutContainerStyled, DescriptionStyled, HideStyled, ImageStyled} from '../../styles';
 
 
 // --------------------------------------
@@ -25,11 +27,11 @@
         // ? Render Component
         // ?--------------------------------------
         return (
-            <div className="servicesContainer">
-                <div className="description">
+            <ServicesStyled>
+                <DescriptionStyled>
                     <h2>Hight <span>quality </span> services </h2>
-                    <div className="cardsContainer">
-                        <div className="card">
+                    <CardsStyled>
+                        <CardStyled>
                             <div className="icon">
                                 <img src={clock} alt=""/>
                                 <h3>Efficient</h3>
@@ -37,9 +39,9 @@
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             </p>
-                        </div>
+                        </CardStyled>
 
-                        <div className="card">
+                        <CardStyled>
                             <div className="icon">
                                 <img src={teamwork} alt="section icon"/>
                                 <h3>Teamwork</h3>
@@ -47,9 +49,9 @@
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             </p>
-                        </div>
+                        </CardStyled>
 
-                        <div className="card">
+                        <CardStyled>
                             <div className="icon">
                                 <img src={diaphragm} alt="section icon"/>
                                 <h3>Diaphgram</h3>
@@ -57,9 +59,9 @@
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             </p>
-                        </div>
+                        </CardStyled>
 
-                        <div className="card">
+                        <CardStyled>
                             <div className="icon">
                                 <img src={money} alt="section icon"/>
                                 <h3>Affordable</h3>
@@ -67,18 +69,56 @@
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             </p>
-                        </div>
-                    </div>
-                </div>
+                        </CardStyled>
+                    </CardsStyled>
+                </DescriptionStyled>
 
-                <div className="imageContainer">
+                <ImageStyled>
                     <img src={home2} alt="section icon"/>
-                </div>
+                </ImageStyled>
 
-            </div>
+            </ServicesStyled>
         )
 
     }
+
+
+    // --------------------------------------
+    // Styles
+    // --------------------------------------
+    const ServicesStyled = styled(AboutContainerStyled)`
+
+        h2 {
+            padding-bottom : 5rem;
+        }
+
+        p {
+            width : 70%;
+            padding:2rem 0rem 4rem 0rem;
+        }
+
+    `;
+
+
+    const CardsStyled = styled.div`
+        display:flex;
+        flex-wrap: wrap;
+    `;
+
+
+    const CardStyled = styled.div`
+        flex-basis : 12rem;
+        .icon {
+            display: flex;
+            align-items : center;
+            h3 {
+                margin-left :1rem;
+                background-color: #fff;
+                color : #000000;
+                padding : 1rem;
+            }
+        }
+    `;
 
 
 // --------------------------------------

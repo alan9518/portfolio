@@ -8,7 +8,9 @@
 // Imports
 // --------------------------------------
     import React from 'react';
+    import styled from 'styled-components';
     import home1 from '../../img/home1.png';
+    import {AboutContainerStyled, DescriptionStyled, HideStyled, ImageStyled} from '../../styles';
 
 
 // --------------------------------------
@@ -21,23 +23,23 @@
         // ? Render Component
         // ?--------------------------------------
         return(
-         <div className="aboutContainer">
+         <AboutContainerStyled>
             <div className="description">
             
-                <div className="title">
-                    <div className="hide">
+                <DescriptionStyled>
+                    <HideStyled>
                         <h2>We Work to make</h2>
-                    </div>
+                    </HideStyled>
 
-                    <div className="hide">
+                    <HideStyled>
                         <h2>your <span> dreams</span> come </h2>
-                    </div>
+                    </HideStyled>
 
-                    <div className="hide">
+                    <HideStyled>
                         <h2>true.</h2>
-                    </div>
+                    </HideStyled>
 
-                </div>
+                </DescriptionStyled>
 
                 
                  <p>Contact for info</p>
@@ -45,12 +47,49 @@
                 
 
             </div>
-            <div className="imageContainer">
+            <ImageStyled>
                 <img src= {home1} alt="home"/>
-            </div>
-         </div>   
+            </ImageStyled>
+         </AboutContainerStyled>   
         )
     }
+
+
+// --------------------------------------
+// Component Styles
+// --------------------------------------
+
+    // const AboutContainerStyled = styled.div`
+    //     min-height : 90vh;
+    //     display : flex;
+    //     align-items:center;
+    //     justify-content: space-between;
+    //     padding : 5rem 10rem;
+    //     color : #fff;
+    // `;
+
+    // const DescriptionStyled = styled.div`
+    //     flex : 1;
+    //     padding-right : 5rem;
+    //     h2 {
+    //         font-weight: lighter;
+    //     }
+    // `;
+
+    // const ImageStyled = styled.div`
+    //     flex : 1;
+    //     overflow : hidden;
+    //     img{
+    //         width:100%;
+    //         height : 80vh;
+    //         object-fit : cover;
+    //     }
+    // `;
+
+    // const HideStyled = styled.div`
+    //     overflow:hidden;
+    // `;
+    
 
 
 // --------------------------------------

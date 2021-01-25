@@ -11,6 +11,8 @@
     import AboutSection from '../components/views/AboutSection';
     import ServicesSection from '../components/views/ServicesSection';
     import FAQSection from '../components/views/FaqSection';
+    import {pageAnimation} from '../Animation';
+    import {motion} from 'framer-motion';
     
 
 
@@ -24,11 +26,12 @@
         // ? Render Component
         // ?--------------------------------------
         return(
-            <Fragment>
+            <motion.div exit="exit" variants = {pageAnimation} initial = "hidden" animate = "show" >
+         
                 <AboutSection/>
                 <ServicesSection/>
                 <FAQSection/>  
-            </Fragment>
+            </motion.div>
         )
     }
 

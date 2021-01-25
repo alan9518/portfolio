@@ -8,6 +8,9 @@
 // Impots
 // --------------------------------------
     import React from 'react';
+    import {pageAnimation} from '../Animation';
+    import {motion} from 'framer-motion';
+    
 
 // --------------------------------------
 // Create Component
@@ -18,7 +21,9 @@
         // ? Render Component
         // ?--------------------------------------
         return (
-            <h1>Contact</h1>
+            <motion.div exit="exit" variants = {pageAnimation} initial = "hidden" animate = "show" >
+                <h1>Contact</h1>
+            </motion.div>
         );
     }
 

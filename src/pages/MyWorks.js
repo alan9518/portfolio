@@ -7,12 +7,15 @@
 // --------------------------------------
 // Impots
 // --------------------------------------
-import React from 'react';
-import { Link } from 'react-router-dom';
-import athlete from '../img/athlete-small.png';
-import theRacer from '../img/theracer-small.png';
-import goodTimes from '../img/goodtimes-small.png';
-import styled from 'styled-components';
+    import React from 'react';
+    import { Link } from 'react-router-dom';
+    import athlete from '../img/athlete-small.png';
+    import theRacer from '../img/theracer-small.png';
+    import goodTimes from '../img/goodtimes-small.png';
+    import {pageAnimation} from '../Animation';
+    import {motion} from 'framer-motion';
+    import styled from 'styled-components';
+
 
 // --------------------------------------
 // Create Component
@@ -23,7 +26,7 @@ const MyWorks = () => {
     // ? Render Component
     // ?--------------------------------------
     return (
-        <WorkStyled>
+        <WorkStyled exit="exit" variants = {pageAnimation} initial = "hidden" animate = "show" style ={{background : "#fff"}} >
             <MovieStyled>
                 <h2>The Athlete</h2>
                 <div className="line"></div>
@@ -57,11 +60,11 @@ const MyWorks = () => {
 // --------------------------------------
 // Styles
 // --------------------------------------
-const WorkStyled = styled.div`
+const WorkStyled = styled(motion.div)`
         min-height : 100vh;
         overflow : hidden;
         padding : 5rem 10rem;
-        background: #fff;
+        /* background: #fff; */
         h2 {
             padding :1rem 0rem;
 

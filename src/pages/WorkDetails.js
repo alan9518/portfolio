@@ -10,8 +10,11 @@
     import React, {useState, useEffect} from 'react';
     import {useHistory} from 'react-router-dom';
     import Award from '../components/awards/Award';
-    import styled from 'styled-components';
     import {MovieState} from '../store/MovieState';
+    import {pageAnimation} from '../Animation';
+    import {motion} from 'framer-motion';
+    import styled from 'styled-components';
+    
 
 // --------------------------------------
 // Create Component
@@ -39,7 +42,7 @@
         return (
             <React.Fragment>
             {work &&(
-                 <DetailSStyled>
+                 <DetailsStyled exit="exit" variants = {pageAnimation} initial = "hidden" animate = "show">
                     <HeadlineStyled>
                         <h2>{work.title}</h2>
                         <img src={work.mainImg} alt={work.title}/>
@@ -52,7 +55,7 @@
                     <ImageDisplayStyled>
                             <img src={work.secondaryImg} alt="Second Image"/>
                     </ImageDisplayStyled>
-                </DetailSStyled>
+                </DetailsStyled>
                 )
             }
             </React.Fragment>
@@ -63,7 +66,7 @@
     // --------------------------------------
     //  Styles
     // --------------------------------------
-    const DetailSStyled = styled.div`
+    const DetailsStyled = styled(motion.div)`
         color : #fff;
     `;
 

@@ -7,22 +7,84 @@
 // --------------------------------------
 // Impots
 // --------------------------------------
-    import React from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import athlete from '../img/athlete-small.png';
+import theRacer from '../img/theracer-small.png';
+import goodTimes from '../img/goodtimes-small.png';
+import styled from 'styled-components';
 
 // --------------------------------------
 // Create Component
 // --------------------------------------
-    const MyWorks  = ()=> {
+const MyWorks = () => {
 
-        // ?--------------------------------------
-        // ? Render Component
-        // ?--------------------------------------
-        return (
-            <h1>My Works</h1>
-        );
-    }
+    // ?--------------------------------------
+    // ? Render Component
+    // ?--------------------------------------
+    return (
+        <WorkStyled>
+            <MovieStyled>
+                <h2>The Athlete</h2>
+                <div className="line"></div>
+                <Link to = {"/work/the-athlete"}>
+                    <img src={athlete} alt="athlete" />
+                </Link>
+            </MovieStyled>
+
+            <MovieStyled>
+                <h2>The Racer</h2>
+                <div className="line"></div>
+                <Link to = "/work/the-racer">
+                    <img src={theRacer} alt="The Racer" />
+                </Link>
+            </MovieStyled>
+
+
+            <MovieStyled>
+                <h2>Good Times</h2>
+                <div className="line"></div>
+                <Link to = "/work/good-times">
+                    <img src={goodTimes} alt="Good Times" />
+                </Link>
+            </MovieStyled>
+        </WorkStyled>
+    );
+}
+
+
+
+// --------------------------------------
+// Styles
+// --------------------------------------
+const WorkStyled = styled.div`
+        min-height : 100vh;
+        overflow : hidden;
+        padding : 5rem 10rem;
+        background: #fff;
+        h2 {
+            padding :1rem 0rem;
+
+        }
+
+    `;
+
+const MovieStyled = styled.div`
+        padding-bottom : 10rem;
+        .line {
+            height : 0.5rem;
+            background: #cccccc;
+            margin-bottom : 3rem;
+        }
+
+        img {
+            width : 100%;
+            height : 70vh;
+            object-fit : cover;
+        }
+    `;
 
 // --------------------------------------
 // Export Component
 // --------------------------------------
-    export default MyWorks;
+export default MyWorks;

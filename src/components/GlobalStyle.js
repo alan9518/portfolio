@@ -29,6 +29,10 @@ const GlobalStyle = createGlobalStyle `
         }
     }
 
+    h1 {
+        color : #fff;
+    }
+
     h2 {
         font-weight : lighter;
         font-size : 3rem;

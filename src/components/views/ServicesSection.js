@@ -14,7 +14,7 @@
     import teamwork from '../../img/teamwork.svg';
     import home2 from '../../img/home2.png';
     import styled from 'styled-components';
-    import {AboutContainerStyled, DescriptionStyled, HideStyled, ImageStyled} from '../../styles';
+    import {AboutContainerStyled} from '../../styles';
 
 
 // --------------------------------------

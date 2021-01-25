@@ -12,6 +12,7 @@ import Nav from './components/nav/Nav';
 import AboutPage from './pages/AboutPage';
 import Contact from './pages/Contact';
 import MyWorks from './pages/MyWorks';
+import WorkDetails from './pages/WorkDetails';
 import { Switch, Route } from 'react-router-dom'
 import GlobalStyles from './components/GlobalStyle';
 
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/" component={AboutPage} />
         <Route exact path="/works" component={MyWorks} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/work/:id" component={WorkDetails} />
       </Switch>
 
       

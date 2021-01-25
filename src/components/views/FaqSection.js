@@ -9,7 +9,7 @@
 // --------------------------------------   
     import React from 'react';
     import styled from 'styled-components';
-    import {AboutContainerStyled, DescriptionStyled, HideStyled, ImageStyled} from '../../styles';
+    import {AboutContainerStyled} from '../../styles';
 
 
 // --------------------------------------

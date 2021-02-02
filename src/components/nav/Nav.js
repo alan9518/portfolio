@@ -36,15 +36,16 @@
 // Component Styles
 // --------------------------------------
     const NavStyled = styled.nav`
-
         min-height : 10vh;
         display : flex;
         margin : auto;
         justify-content:space-between;
         align-items : center;
         padding : 1rem 10rem;
+        position : sticky;
+        top : 0;
         background-color : #282828;
-
+        z-index : 5;
         ul {
             display :flex;
             list-style : none;

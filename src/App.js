@@ -12,6 +12,7 @@
   import AboutPage from './pages/AboutPage';
   import Contact from './pages/Contact';
   import MyWorks from './pages/MyWorks';
+  import ScrollTop from './components/scroll/ScrollTop';
   import WorkDetails from './pages/WorkDetails';
   import { Switch, Route, useLocation} from 'react-router-dom'
   import {AnimatePresence} from 'framer-motion';
@@ -36,7 +37,7 @@ function App() {
           <Route exact path="/work/:id" component={WorkDetails} />
         </Switch>
       </AnimatePresence>
-      
+      <ScrollTop/>
     </div>
   );
 }

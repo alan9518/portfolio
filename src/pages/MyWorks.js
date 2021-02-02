@@ -25,7 +25,7 @@ const MyWorks = () => {
 
     const [element, controls] = UseScroll();
     const [element2, controls2] = UseScroll();
-    const [element3, controls3] = UseScroll();
+    // const [element3, controls3] = UseScroll();
 
     // ?--------------------------------------
     // ? Render Component
@@ -40,7 +40,7 @@ const MyWorks = () => {
             </motion.div>
             <Frame4Styled variants = {sliderBGAnimation}/>
 
-            <MovieStyled variants = {scrollAnimation} ref = {element} animate={controls} initial = "hidden">
+            <MovieStyled initial = "show">
                 <motion.h2 variants = {fadeAnimation}>The Athlete</motion.h2>
                 <motion.div className="line" variants = {lineAnimation}></motion.div>
                 <Link to = {"/work/the-athlete"}>
@@ -50,7 +50,7 @@ const MyWorks = () => {
                 </Link>
             </MovieStyled>
        
-            <MovieStyled variants = {scrollAnimation} ref = {element2} animate={controls2} initial = "hidden">
+            <MovieStyled variants = {scrollAnimation} ref = {element} animate={controls} initial = "hidden">
                 <h2>The Racer</h2>
                 <motion.div className="line" variants = {lineAnimation}></motion.div>
                 <Link to = "/work/the-racer">
@@ -59,14 +59,13 @@ const MyWorks = () => {
             </MovieStyled>
 
     
-            <MovieStyled variants = {scrollAnimation} ref = {element3} animate={controls3} initial = "hidden">
+            <MovieStyled variants = {scrollAnimation} ref = {element2} animate={controls2} initial = "hidden">
                 <h2>Good Times</h2>
                 <motion.div className="line" variants = {lineAnimation}></motion.div>
                 <Link to = "/work/good-times">
                     <img src={goodTimes} alt="Good Times" />
                 </Link>
             </MovieStyled>
-    
         </WorkStyled>
     );
 }
